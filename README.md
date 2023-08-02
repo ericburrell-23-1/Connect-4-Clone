@@ -14,7 +14,7 @@ As expected, the board will lock once the game is complete, ending with either a
 
 ### Header and Footer
 
-The header describes the current state of the game, declaring a winner or draw, or indicating whose turn it is next. The footer contains two buttons: one to reset the board for a new game, and another to have an AI-generated selection of the next move.
+The header describes the current state of the game, declaring a winner or draw, or indicating whose turn it is next. The footer contains one of two buttons: one to reset the board for a new game, and another to have an AI-generated selection of the next move.
 
 ### Suggest Button
 

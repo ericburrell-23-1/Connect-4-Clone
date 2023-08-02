@@ -8,7 +8,7 @@ import {
   NO_PLAYER,
   PLAYER_1,
   PLAYER_2,
-  GAME_STATE_IDLE,
+  // GAME_STATE_IDLE,
   GAME_STATE_PLAYING,
   GAME_STATE_WIN,
   GAME_STATE_DRAW,
@@ -27,7 +27,7 @@ const GameBoard = () => {
 
   const initGame = () => {
     console.log("init game");
-    setGameBoard(Array(16).fill(NO_PLAYER));
+    setGameBoard(Array(NUM_OF_CIRCLES).fill(NO_PLAYER));
     setCurrentPlayer(PLAYER_1);
     setGameState(GAME_STATE_PLAYING);
     setWinPlayer(NO_PLAYER);
@@ -90,7 +90,11 @@ const GameBoard = () => {
         gameState={gameState}
       />
       <div className="gameBoard">{initBoard()}</div>
-      <Footer onNewGameClick={initGame} onSuggestClick={suggestMove} />
+      <Footer
+        onNewGameClick={initGame}
+        onSuggestClick={suggestMove}
+        gameState={gameState}
+      />
     </>
   );
 };
